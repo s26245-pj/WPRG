@@ -43,7 +43,7 @@
 </head>
 <body>
 <h1>Hotel Reservation</h1>
-<form action="Hotel_reservation.php.php" method="post">
+<form action="Hotel_reservation.php" method="POST">
     <label for="persons">Persons:</label>
     <select id="persons" name="persons">
         <option value="1">1</option>
@@ -51,6 +51,7 @@
         <option value="3">3</option>
         <option value="4">4</option>
     </select>
+
     <br>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
@@ -75,11 +76,9 @@
     <label for="kid_bed">Additional bed for child:</label>
     <input type="checkbox" id="kid_bed" name="kid_bed">
     <br><br>
-    <label for="facilities">Facilities:</label>
-    <select id="facilities" name="facilities[]" multiple>
-        <option value="air_conditioning">air-conditioning</option>
-        <option value="ashtray">ashtray</option>
-    </select>
+    <label>Facilities:</label><br>
+    <input type="checkbox" name="facilities[]" value="air-conditioning">Air-conditioning<br>
+    <input type="checkbox" name="facilities[]" value="Ashtray">Ashtray for smokers<br>
     <br>
     <input type="submit" value="Reserve">
 </form>
