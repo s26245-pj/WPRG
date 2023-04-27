@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $kid_bed = isset($_POST['kid_bed']) ? 'yes' : 'no';
     $facilities = isset($_POST['facilities']) ? implode(', ', $_POST['facilities']) : 'None';
 
+    $num_of_guests = isset($_POST['num_of_guests']) ? $_POST['num_of_guests'] : 0;
 
 
     echo "Number of people: $persons<br>";
