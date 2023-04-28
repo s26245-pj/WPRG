@@ -1,5 +1,0 @@
-http://www.google.com/; Wyszukiwarka Google
-
-http://www.yahoo.com/;Wyszukiwarka Yahoo!
-
-http://pl-pl.facebook.com/;Strona  portalu Facebook
