@@ -11,20 +11,22 @@ $birth_date = $_GET['birth_date'];
 
 if(!empty($birth_date)) {
 
-    $weekDayOfBirth = strftime('%A', strtotime($birth_date));
+    $birthDateObj = new DateTime($birth_date);
+    $weekDayOfBirth = $birthDateObj->format('l');
 
-    $currentYear = date('Y');
-    $yearOfBirth = date('Y', strtotime($birth_date));
-    $age = $currentYear  - $yearOfBirth;
+    $currentYear = (int) date('Y');
+    $yearOfBirth = (int) $birthDateObj->format('Y');
+    $age = $currentYear - $yearOfBirth;
 
     $nextBirthdayYear = $currentYear;
-    $nextBirthdayDate = date('Y-m-d', strtotime($birth_date . " +$age years"));
-    if (date('Y-m-d') > $nextBirthdayDate) {
+    $nextBirthdayDate = new DateTime($birth_date . " +$age years");
+    if ($nextBirthdayDate < new DateTime()) {
         $nextBirthdayYear++;
-        $nextBirthdayDate = date('Y-m-d', strtotime($birth_date . " +$nextBirthdayYear years"));
+        $nextBirthdayDate->modify("+1 year");
     }
 
-    $daysToNextBirthday = floor((strtotime($nextBirthdayDate) - time()) / (60 * 60 * 24));
+    $daysToNextBirthday = floor(($nextBirthdayDate->getTimestamp() - time()) / (60 * 60 * 24));
+
 
     echo "<p>You were born on $weekDayOfBirth. You are $age years old and there are
             $daysToNextBirthday days until Your next birthday</p>";
