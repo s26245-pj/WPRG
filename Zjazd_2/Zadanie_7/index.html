@@ -1,0 +1,29 @@
+<!
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File structure</title>
+</head>
+<body>
+<form action="Operations_on_file.php" method="post">
+    <label for="path">File Path:</label>
+    <input type="text" id="path" name="path" required><br>
+
+    <label for="directory">Directory name:</label>
+    <input type="text" id="directory" name="directory" required><br>
+
+    <label for="operation">Operation:</label>
+    <select id="operation" name="operation">
+        <option value="read">Read</option>
+        <option value="delete">Delete</option>
+        <option value="create">Create</option>
+    </select><br>
+
+    <input type="submit" value="execute">
+</form>
+</body>
+</html>
+
