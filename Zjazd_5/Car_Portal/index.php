@@ -52,7 +52,7 @@
     $password = "root";
     $dbname = "Cars";
 
-    $conn = mysqli_connect($servername, $username, $password);
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     if (!$conn) {
         die("Nie udało się połączyć z bazą danych: " . mysqli_connect_error());
@@ -65,10 +65,11 @@
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
-            echo "<td><a href='car_info.php?id=" . $row["id"] . "'>" . $row["id"] . "</a></td>";
             echo "<td>" . $row["marka"] . "</td>";
             echo "<td>" . $row["model"] . "</td>";
             echo "<td>" . $row["cena"] . "</td>";
+            echo "<td>" . $row["rok"] . "</td>";
+            echo "<td>" . $row["opis"] . "</td>";
             echo "</tr>";
         }
     } else {

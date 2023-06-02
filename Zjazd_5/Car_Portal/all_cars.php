@@ -39,7 +39,7 @@
     $sql = "SELECT * FROM samochody ORDER BY rok ASC";
     $result = $conn->query($sql);
 
-    // Wyświetlanie wyników w tabeli
+
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
