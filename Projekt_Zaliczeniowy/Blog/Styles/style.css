@@ -33,6 +33,13 @@ a {
     color: white;
     border: 1px solid transparent;
     border-radius: .25rem;
+    font-size: 1.08em;
+    font-family: 'Lora', serif;
+}
+
+.btn-big {
+    padding: .7rem 1.3rem;
+    line-height: 1.3rem;
 }
 
 .btn:hover {
@@ -53,6 +60,27 @@ a {
     font-size: 1,5em;
 }
 
+
+.msg {
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.success {
+    color: #3a6e3a;
+    border: 1px solid #3a6e3a;
+    background: #bcf5bc;
+}
+
+.error {
+    color: #884b4b;
+    border: 1px solid #884b4b;
+    background-color: #f5bcbc;
+
+}
 
 header {
     background: #0E94a0;
@@ -226,10 +254,26 @@ header .menu-toggle {
     float: left;
 }
 
+.content .main-content.single {
+    background: white;
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.content .main-content.single .post-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .content .sidebar {
     width: 30%;
     float: left;
     height: 300px;
+}
+
+.content .sidebar.single {
+    padding: 0px 10px;
 }
 
 .content .main-content .recent-post-title {
@@ -265,6 +309,19 @@ header .menu-toggle {
     width: 40%;
     height: 100%;
     float: left;
+}
+
+.content .popular .post {
+    border-top: 1px #e0e0e0;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.content .popular .post img {
+    height: 60px;
+    width: 75px;
+    float: left;
+    margin-right: 10px;
 }
 
 .content .main-content .post .post-preview {
@@ -318,9 +375,77 @@ header .menu-toggle {
 }
 
 .footer .footer-content {
-    border: 1px solid red;
     height: 350px;
+    display: flex;
+}
 
+.footer .footer-content .footer-section {
+    flex: 1;
+    padding: 25px;
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2 {
+    color: white;
+}
+
+.footer .footer-content .about h1 span {
+    color: #05f7ff;
+}
+
+.footer .footer-content .about .socials a {
+    border: 1px solid grey;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.footer .footer-content .about .socials a:hover {
+    border: 1px solid white;
+    color: white;
+    transition: .3s;
+} 
+
+.footer .footer-content .about .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.footer .footer-content .links ul a {
+    display: block;
+     margin-bottom: 10px;
+     font-size: 1.2em;
+     transition: all .3s;
+}
+
+.footer .footer-content .links ul a:hover {
+    color: white;
+    transition: all .3s;
+    margin-left: 15px;
+}
+
+.footer .footer-content .contact-form .contact-input {
+    background: #272727;
+    color: #bebdbd;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+}
+
+.footer .footer-content .contact-form .contact-input:focus {
+    background: #1a1a1a;
+}
+
+.footer .footer-content .contact-form .contact-btn {
+    float: right;
 }
 
 .footer .footer-bottom  {
@@ -336,7 +461,61 @@ header .menu-toggle {
 }
 
 
+/* LOGIN / REGISTER */
 
+.auth-content {
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+
+}
+
+.auth-content .form-title {
+    text-align: center;
+
+}
+
+.auth-content form div {
+    margin-bottom: 10px;
+
+}
+
+.auth-content form p {
+    text-align: center;
+}
+.auth-content form p a  {
+    text-decoration: underline;
+}
+
+
+
+
+
+@media only screen and (max-width: 934px) {
+    .content {
+        width: 100%;
+    }
+
+    .content .main-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content .main-content .post {
+        width: 100%;
+    }
+
+    .content .sidebar{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content .sidebar .section.search {
+        margin-top: 30px;
+    }
+}
 
 
 @media only screen and (max-width: 750px) {
