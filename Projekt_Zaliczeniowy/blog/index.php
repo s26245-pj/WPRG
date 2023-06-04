@@ -6,32 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WPRG_BLOG</title>
     <script src="https://kit.fontawesome.com/ab6436d70f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Candal&family=Lora&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1 class="logo-text"><span>WPRG</span>BLOG</h1>
-        </div>
-        <i class="fa-solid fa-bars menu-toggle"></i>
-        <ul class="nav">
-            <li><a href="#">Home</a>
-        </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <!--<li><a href="#"></a>Sign Up</li>
-            <li><a href="#"></a>Login</li>-->
-            <li><a href="#"><i class="fa fa-user"></i> 
-                shady
-            <i class="fa fa-chevron-down" style="font-size: .8em;"></i></a>
-                <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#" class = "logout">Logout</a></li>
-                </ul>
-            </li>
-        </ul>
-    </header>
+
+    <?php include('app/includes/header.php'); ?>
 
     <div class="page-wrapper">
         <div class="post-slider">
@@ -41,7 +21,7 @@
             <div class="post-wrapper">
 
                 <div class="post">
-                    <img src="images/africa.jpg" alt="" class="slider-image">
+                    <img src="assets/images/africa.jpg" alt="" class="slider-image">
                     <div class="post-info">
                         <h4><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h4>
                         <i class="fa fa-user"></i> John Doe 
@@ -51,7 +31,7 @@
                 </div>
 
                 <div class="post">
-                    <img src="images/africa.jpg" alt="" class="slider-image">
+                    <img src="assets/images/africa.jpg" alt="" class="slider-image">
                     <div class="post-info">
                         <h4><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h4>
                         <i class="fa fa-user"></i> John Doe 
@@ -61,7 +41,7 @@
                 </div>
 
                 <div class="post">
-                    <img src="images/africa.jpg" alt="" class="slider-image">
+                    <img src="assets/images/africa.jpg" alt="" class="slider-image">
                     <div class="post-info">
                         <h4><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h4>
                         <i class="fa fa-user"></i> John Doe 
@@ -71,7 +51,7 @@
                 </div>
 
                 <div class="post">
-                    <img src="images/africa.jpg" alt="" class="slider-image">
+                    <img src="assets/images/africa.jpg" alt="" class="slider-image">
                     <div class="post-info">
                         <h4><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h4>
                         <i class="fa fa-user"></i> John Doe 
@@ -81,7 +61,7 @@
                 </div>
 
                 <div class="post">
-                    <img src="images/africa.jpg" alt="" class="slider-image">
+                    <img src="assets/images/africa.jpg" alt="" class="slider-image">
                     <div class="post-info">
                         <h4><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h4>
                         <i class="fa fa-user"></i> John Doe 
@@ -97,7 +77,7 @@
                 <h1 class="recent-post-title">Recent Posts</h1>
 
                 <div class="post">
-                    <img src="images/brothers.jpg" alt="" class="post-image">
+                    <img src="assets/images/brothers.jpg" alt="" class="post-image">
                     <div class="post-preview">
                         <h2><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h2>
                         <i class="far fa-user"></i> John Travolta
@@ -110,7 +90,7 @@
                     </div>
                 </div>
                 <div class="post">
-                    <img src="images/brothers.jpg" alt="" class="post-image">
+                    <img src="assets/images/brothers.jpg" alt="" class="post-image">
                     <div class="post-preview">
                         <h2><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h2>
                         <i class="far fa-user"></i> John Travolta
@@ -123,7 +103,7 @@
                     </div>
                 </div>
                 <div class="post">
-                    <img src="images/brothers.jpg" alt="" class="post-image">
+                    <img src="assets/images/brothers.jpg" alt="" class="post-image">
                     <div class="post-preview">
                         <h2><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h2>
                         <i class="far fa-user"></i> John Travolta
@@ -167,61 +147,13 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="footer-content">
-            <div class="footer-section about">
-                <h1 class="logo-text"><span>WPRG</span>BLOG</h1>
-                <p>
-                    A blog created for the completion of the Programming workshop
-                     at the Polish-Japanese Academy of Information Technology
-                </p>
-                <div class="contact">
-                    <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
-                    <span><i class="fas fa-envelope"></i> &nbsp; s26245@pjwstk.edu.pl</span>
-                </div>
-                <div class="socials">
-                    <a href=""><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <br>
-                <ul>
-                    <a href="#"><li>Events</li></a>
-                    <a href="#"><li>Team</li></a>
-                    <a href="#"><li>Gallery</li></a>
-                    <a href="#"><li>Terms and Conditions</li></a>
-                </ul>
-
-            </div>
-            <div class="footer-section contact-form">
-                <h2>Contact us</h2>
-                <br>
-                <form action="index.html" method="post">
-                    <input type="text" name="email" class="text-input contact-input" placeholder="Your email address...">
-                    <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-                    <button type="sumbit" class="btn btn-big contact-btn">
-                        <i class="fas fa-envelope"></i>
-                        Send
-                    </button>
-                </form>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            &copy; pjatk | warsztaty programistyczne
-        </div>
-    </div>
-
+    <?php include(ROOT_PATH . 'app/includes/footer.php'); ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
     
 </body>
 

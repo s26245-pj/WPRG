@@ -6,32 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <script src="https://kit.fontawesome.com/ab6436d70f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Candal&family=Lora&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1 class="logo-text"><span>WPRG</span>BLOG</h1>
-        </div>
-        <i class="fa-solid fa-bars menu-toggle"></i>
-        <ul class="nav">
-            <li><a href="#">Home</a>
-        </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <!--<li><a href="#"></a>Sign Up</li>
-            <li><a href="#"></a>Login</li>-->
-            <li><a href="#"><i class="fa fa-user"></i> 
-                shady
-            <i class="fa fa-chevron-down" style="font-size: .8em;"></i></a>
-                <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#" class = "logout">Logout</a></li>
-                </ul>
-            </li>
-        </ul>
-    </header>
+    <?php include('app/includes/header.php'); ?>
 
     <div class="auth-content">
 
@@ -50,7 +29,7 @@
                 <button type="submit" name="register-btn" class="btn btn-big">Login</button>
             </div>
 
-            <p>Or <a href="register.html">Sign Up</a></p>
+            <p>Or <a href="register.php">Sign Up</a></p>
 
         </form>
 
@@ -60,7 +39,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
     
 </body>
 
