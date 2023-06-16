@@ -18,26 +18,22 @@
 
         <form action="register.php" method="post">
             <h2 class="form-title">Register</h2>
-
-            <!--<div class="msg error">
-                <li>Username required</li>
-            </div>-->
-
+            <?php include('app/validations/errors.php'); ?>
             <div>
                 <label>Username</label>
-                <input type="text" name="username" class="text-input"></input>
+                <input type="text" name="username" class="text-input" value="<?php echo $username; ?>"></input>
             </div>
             <div>
                 <label>Email</label>
-                <input type="email" name="email" class="text-input"></input>
+                <input type="email" name="email" class="text-input" value="<?php echo $email; ?>"></input>
             </div>
             <div>
                 <label>Password</label>
-                <input type="password" name="password" class="text-input"></input>
+                <input type="password" name="password" class="text-input" value="<?php echo $password; ?>"></input>
             </div>
             <div>
                 <label>Password Confirmation</label>
-                <input type="password" name="passwordConf" class="text-input"></input>
+                <input type="password" name="passwordConf" class="text-input"value="<?php echo $passwordConf; ?>"></input>
             </div>
 
             <div>

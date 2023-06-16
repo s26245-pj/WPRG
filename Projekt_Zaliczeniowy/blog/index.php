@@ -1,3 +1,7 @@
+<?php include("path.php"); ?> 
+
+<?php include("app/database/db.php"); ?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,7 @@
 <body>
 
     <?php include('app/includes/header.php'); ?>
-
+    <?php include('app/includes/messages.php'); ?>
     <div class="page-wrapper">
         <div class="post-slider">
             <h1 class="slider-title">Trending</h1>
@@ -147,7 +151,7 @@
         </div>
     </div>
 
-    <?php include(ROOT_PATH . 'app/includes/footer.php'); ?>
+    <?php include('app/includes/footer.php'); ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 

@@ -68,7 +68,6 @@ function selectOne($table, $conditions) {
     $records = $stmt->get_result()->fetch_assoc();
     return $records;
 }
-
 function create($table, $data)
 {
     global $conn;
@@ -77,12 +76,12 @@ function create($table, $data)
 
     $i = 0;
     foreach ($data as $key => $value) {
-    if ($i === 0) {
-    $sql = $sql . " $key=?";
-    } else {
-        $sql= $sql . ", $key=?";
-    }
-    $i++;
+        if ($i === 0) {
+            $sql = $sql . " $key=?";
+        } else {
+            $sql = $sql . ", $key=?";
+        }
+        $i++;
     }
 
     $stmt = prepareAndExecuteQuery($sql, $data);
