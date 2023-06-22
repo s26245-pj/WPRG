@@ -1,6 +1,10 @@
 <?php include("path.php"); ?> 
 
-<?php include("app/database/db.php"); ?> 
+<?php include("app/database/db.php");
+
+$posts = selectAll('posts', ['published' => 1]);
+
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,103 +26,47 @@
             <h1 class="slider-title">Trending</h1>
             <i class="fa fa-chevron-left prev"></i>
             <i class="fa fa-chevron-right next"></i>
-            <div class="post-wrapper">
 
+
+            <div class="post-wrapper"> 
+
+            <?php foreach ($posts as $post): ?>
+                <?php var_dump($post['image']); ?>
+                <?php echo 'app/assets/images' . '/' . $post['image']; ?>
                 <div class="post">
-                    <img src="assets/images/africa.jpg" alt="" class="slider-image">
+                <img src="<?php echo '/app/assets/images' . '/' . $post['image']; ?>" alt="" class="slider-image">
                     <div class="post-info">
-                        <h4><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h4>
+                        <h4><a href="single.html"><?php echo $post['title']; ?></a></h4>
                         <i class="fa fa-user"></i> John Doe 
                         &nbsp;
-                        <i class="far fa-calendar"></i> June 02 2022
+                        <i class="far fa-calendar"><?php echo date('F j, Y', strtotime($post['created'])) ?></i> 
                     </div>
                 </div>
-
-                <div class="post">
-                    <img src="assets/images/africa.jpg" alt="" class="slider-image">
-                    <div class="post-info">
-                        <h4><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h4>
-                        <i class="fa fa-user"></i> John Doe 
-                        &nbsp;
-                        <i class="far fa-calendar"></i> June 02 2022
-                    </div>
-                </div>
-
-                <div class="post">
-                    <img src="assets/images/africa.jpg" alt="" class="slider-image">
-                    <div class="post-info">
-                        <h4><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h4>
-                        <i class="fa fa-user"></i> John Doe 
-                        &nbsp;
-                        <i class="far fa-calendar"></i> June 02 2022
-                    </div>
-                </div>
-
-                <div class="post">
-                    <img src="assets/images/africa.jpg" alt="" class="slider-image">
-                    <div class="post-info">
-                        <h4><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h4>
-                        <i class="fa fa-user"></i> John Doe 
-                        &nbsp;
-                        <i class="far fa-calendar"></i> June 02 2022
-                    </div>
-                </div>
-
-                <div class="post">
-                    <img src="assets/images/africa.jpg" alt="" class="slider-image">
-                    <div class="post-info">
-                        <h4><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h4>
-                        <i class="fa fa-user"></i> John Doe 
-                        &nbsp;
-                        <i class="far fa-calendar"></i> June 02 2023
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
         <div class="content clearfix">
 
             <div class="main-content">
                 <h1 class="recent-post-title">Recent Posts</h1>
+                <?php foreach ($posts as $post): ?>   
+                    <img src="/app/assets/images/1687417606_japko.jpg" alt="" class="post-image">
 
+                  
                 <div class="post">
-                    <img src="assets/images/brothers.jpg" alt="" class="post-image">
+                <img src="<?php echo 'app/assets/images' . $post['image']; ?>" alt="" class="post-image">
                     <div class="post-preview">
-                        <h2><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h2>
+                        <h2><a href="single.html"><?php echo $post['title']; ?></a></h2>
                         <i class="far fa-user"></i> John Travolta
                         &nbsp;
-                        <i class="far fa-calendar"></i> June 02, 2023
-                        <p class="preview-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            ipsa vel aspernatur quasi ullam veritatis aliquam unde officia eveniet.
+                        <i class="far fa-calendar"><?php echo date('F j, Y', strtotime($post['created'])) ?></i>
+                        <p class="preview-text">
+                            <?php echo substr($post['body'], 0, 150) . '...' ?>
                         </p>
                         <a href="single.html" class="btn read-more">Read More</a>
                     </div>
                 </div>
-                <div class="post">
-                    <img src="assets/images/brothers.jpg" alt="" class="post-image">
-                    <div class="post-preview">
-                        <h2><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h2>
-                        <i class="far fa-user"></i> John Travolta
-                        &nbsp;
-                        <i class="far fa-calendar"></i> June 02, 2023
-                        <p class="preview-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            ipsa vel aspernatur quasi ullam veritatis aliquam unde officia eveniet.
-                        </p>
-                        <a href="single.html" class="btn read-more">Read More</a>
-                    </div>
-                </div>
-                <div class="post">
-                    <img src="assets/images/brothers.jpg" alt="" class="post-image">
-                    <div class="post-preview">
-                        <h2><a href="single.html">Molestiae enim tempora ipsum quae suscipit qui quos veritatis.</a></h2>
-                        <i class="far fa-user"></i> John Travolta
-                        &nbsp;
-                        <i class="far fa-calendar"></i> June 02, 2023
-                        <p class="preview-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            ipsa vel aspernatur quasi ullam veritatis aliquam unde officia eveniet.
-                        </p>
-                        <a href="single.html" class="btn read-more">Read More</a>
-                    </div>
-                </div> 
+                <?php endforeach; ?>
 
             </div>
 
